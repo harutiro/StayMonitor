@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "net.harutiro.nationalweather"
-    compileSdk = 35
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "net.harutiro.nationalweather"
-        minSdk = 26
-        targetSdk = 35
+        minSdk = 27
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
@@ -33,11 +33,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
     buildFeatures {
         compose = true
