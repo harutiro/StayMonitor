@@ -2,14 +2,17 @@ package net.harutiro.nationalweather.core.utils.room
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
-import net.harutiro.nationalweather.core.utils.room.typeConverter.CityIdConverter
-import net.harutiro.nationalweather.core.utils.room.typeConverter.DateConverter
-import net.harutiro.nationalweather.features.favoriteDB.apis.WeatherFavoriteDao
-import net.harutiro.nationalweather.features.favoriteDB.entities.WeatherFavoriteEntity
+import net.harutiro.nationalweather.features.stayLogDB.apis.GeofencePinDao
+import net.harutiro.nationalweather.features.stayLogDB.apis.StayLogDao
+import net.harutiro.nationalweather.features.stayLogDB.entities.GeofencePinEntity
+import net.harutiro.nationalweather.features.stayLogDB.entities.StayLogEntity
 
-@Database(entities = [WeatherFavoriteEntity::class], version = 1)
-@TypeConverters(CityIdConverter::class, DateConverter::class)
+@Database(
+    entities = [StayLogEntity::class, GeofencePinEntity::class],
+    version = 1,
+)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun weatherFavoriteDao(): WeatherFavoriteDao
+    abstract fun stayLogDao(): StayLogDao
+
+    abstract fun geofencePinDao(): GeofencePinDao
 }

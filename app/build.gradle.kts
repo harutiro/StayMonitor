@@ -87,6 +87,7 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.coil.svg)
     implementation(libs.viewmodel.compose)
+    implementation(libs.lifecycle.runtime.compose)
     implementation(libs.material.icons.extended)
     implementation(libs.accompanist.swiperefresh)
 
@@ -97,7 +98,13 @@ dependencies {
     implementation(libs.moshi.kotlin)
 
     implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
     ksp(libs.room.compiler)
+
+    implementation(libs.play.services.location)
+    implementation(libs.osmdroid.android)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.preference.ktx)
 
     testImplementation(kotlin("test"))
 }

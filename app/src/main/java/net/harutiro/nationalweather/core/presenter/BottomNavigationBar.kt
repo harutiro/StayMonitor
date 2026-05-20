@@ -1,8 +1,8 @@
 package net.harutiro.nationalweather.core.presenter
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.Place
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Icon
@@ -87,20 +87,20 @@ fun GreetingPreview() {
             items =
                 listOf(
                     BottomNavigationItem(
-                        title = stringResource(id = R.string.home),
-                        selectedIcon = Icons.Filled.Home,
-                        unselectedIcon = Icons.Filled.Home,
+                        title = stringResource(id = R.string.tab_map),
+                        selectedIcon = Icons.Filled.Place,
+                        unselectedIcon = Icons.Filled.Place,
                         hasNews = false,
                         badgeCount = null,
-                        path = BottomNavigationBarRoute.HOME,
+                        path = BottomNavigationBarRoute.MAP,
                     ),
                     BottomNavigationItem(
-                        title = stringResource(id = R.string.favorite),
-                        selectedIcon = Icons.Filled.Favorite,
-                        unselectedIcon = Icons.Filled.Favorite,
+                        title = stringResource(id = R.string.tab_history),
+                        selectedIcon = Icons.Filled.History,
+                        unselectedIcon = Icons.Filled.History,
                         hasNews = false,
                         badgeCount = null,
-                        path = BottomNavigationBarRoute.FAVORITE,
+                        path = BottomNavigationBarRoute.HISTORY,
                     ),
                 ),
             selectedItemIndex = 0,

@@ -1,6 +1,12 @@
 <resources>
-    <string name="app_name">NationalWeather</string>
+    <string name="app_name">StayMonitor</string>
     <string name="home">全国天気</string>
     <string name="favorite">お気に入り</string>
     <string name="empty_text">お気に入りがありません</string>
+    <string name="tab_map">マップ</string>
+    <string name="tab_history">履歴</string>
+    <string name="register_pin_title">この場所を登録</string>
+    <string name="pin_name_hint">場所の名前</string>
+    <string name="register">登録</string>
+    <string name="cancel">キャンセル</string>
 </resources>
