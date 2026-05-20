@@ -1,6 +1,10 @@
 StayMonitor (滞在管理アプリ)
 ===
 
+![](./images/map.png)
+
+![](./images/list.png)
+
 ## 概要
 OpenStreetMap 上にユーザーが指定したピンを中心とした 半径100m の Geofence を作成し、
 そのエリアへの **入室 / 退出** を自動で Room データベースに記録するアプリです。
