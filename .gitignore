@@ -13,3 +13,33 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# ===== iOS / Xcode =====
+**/.DS_Store
+xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Swift / Clang compiler intermediates
+*.d
+*.dia
+*.o
+*.swiftdeps
+*.swiftconstvalues
+
+# ===== Claude Code =====
+.claude/settings.local.json
