@@ -1,5 +1,5 @@
 //
-//  ios_stay_monitorUITests.swift
+//  StayMonitorUITests.swift
 //  ios-stay-monitorUITests
 //
 //  Created by 上條栞汰 on 2026/05/21.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class ios_stay_monitorUITests: XCTestCase {
+final class StayMonitorUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

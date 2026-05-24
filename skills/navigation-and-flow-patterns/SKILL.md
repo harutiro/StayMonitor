@@ -10,7 +10,7 @@ StayMonitorプロジェクトでの画面遷移パターン集。
 
 ## アプリ全体の画面フロー
 
-```
+```text
 RootView (RootReducer)
   ├─ LaunchScreen
   ├─ Onboarding

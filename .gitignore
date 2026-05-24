@@ -33,7 +33,6 @@ DerivedData/
 # Swift Package Manager
 .build/
 .swiftpm/
-Package.resolved
 
 # Swift / Clang compiler intermediates
 *.d

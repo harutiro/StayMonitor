@@ -37,7 +37,8 @@ fi
 # 2. SwiftLint（--strict）。違反は block で差し戻す
 if command -v swiftlint >/dev/null 2>&1 && [ -f "$SRCROOT/ios/.swiftlint.yml" ]; then
   LINT_OUTPUT=$(swiftlint lint --strict --quiet --config "$SRCROOT/ios/.swiftlint.yml" "$FILE_PATH" 2>&1)
-  if [ $? -ne 0 ] && [ -n "$LINT_OUTPUT" ]; then
+  if [ $? -ne 0 ]; then
+    [ -n "$LINT_OUTPUT" ] || LINT_OUTPUT="SwiftLint failed (no output)."
     jq -n --arg reason "$LINT_OUTPUT" '{"decision":"block","reason":$reason}'
     exit 0
   fi

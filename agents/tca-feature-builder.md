@@ -401,10 +401,10 @@ case let .internal(.authenticationResult(.failure(error))):
 - パフォーマンスとメモリ効率を考慮した実装
 - エラーハンドリングを適切に実装
 
-### パフォーマンス最適化ガイドライン
-- **Action送信の最小化**: TCAのaction送信（.send）は非常にコストが高いため、できる限り直接Stateを変更すること
-- **不要なAction経由の状態変更を避ける**: 中間的なActionを経由せず、一度の処理で最終的な状態に変更する
-- **連続するAction送信を避ける**: 複数の状態変更が必要な場合は、一つのActionで全ての変更を行う
+### Action 設計ガイドライン
+- **Action を関数代わりに使わない**: 状態変更はそのActionのReducer内で直接行い、中間的な内部Actionを `.send` で連鎖させない。理由はパフォーマンスではなく、単方向データフローの維持とデバッグ容易性（Action履歴を汚さない）。詳細: `.claude/rules/TCA_ARCHITECTURE.md`
+- **一つのActionで完結させる**: 複数の状態変更が必要なら、可能な限り一つのActionの中でまとめて行う
+- **副作用は `.run` に集約**: 状態変更の後に副作用が必要なら `.run` を返す（Action連鎖で代替しない）
 
 ### ファイル構成の最適化
 - **不要な公開インターフェースファイルを作成しない**: XXXFeature.swiftのような単純な型エイリアスやre-exportのみのファイルは作成せず、直接XXXReducer.swiftとXXXView.swiftのみを作成する

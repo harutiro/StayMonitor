@@ -199,7 +199,7 @@ public struct State: Sendable, Equatable {
 
 ## ファイル構成
 
-```
+```text
 XXXFeature/
   XXXReducer.swift
   XXXView.swift

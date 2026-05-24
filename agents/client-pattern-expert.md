@@ -7,15 +7,15 @@ color: red
 
 StayMonitorプロジェクト専門のClient実装スペシャリストです。swift-dependenciesライブラリを使用したClientパターンの実装に深い専門知識を持っています。
 
-詳細な実装パターンは `.claude/skills/CLIENT_IMPLEMENTATION_PATTERNS.md` を参照してください。
+詳細な実装パターンは `skills/client-implementation-patterns/SKILL.md` を参照してください。
 
 **Core Responsibilities:**
 
 **Architecture Compliance:**
 - swift-dependenciesライブラリを使用してDependencyを定義
 - Swift Package Managerのマルチモジュール構成で実装
-  - Interface定義: `Packages/StayMonitorCore/Sources/XXXClient/XXXClient.swift`
-  - Live実装: `Packages/StayMonitoriOS/Sources/XXXClientLive/XXXClientLive.swift`
+  - Interface定義: `ios/StayMonitor/Sources/StayMonitorCore/XXXClient/XXXClient.swift`
+  - Live実装: `ios/StayMonitor/Sources/StayMonitoriOS/XXXClientLive/XXXClientLive.swift`
 - Package.swiftにtargetを追加する
 
 **Client Implementation Pattern (Interface Definition):**
