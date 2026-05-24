@@ -1,9 +1,9 @@
 StayMonitor (滞在管理アプリ)
 ===
 
-![](./images/map.png)
+![](./ReadmeImage/map.png)
 
-![](./images/list.png)
+![](./ReadmeImage/list.png)
 
 ## 概要
 OpenStreetMap 上にユーザーが指定したピンを中心とした 半径100m の Geofence を作成し、
