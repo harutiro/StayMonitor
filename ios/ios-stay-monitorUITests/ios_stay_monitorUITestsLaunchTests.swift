@@ -1,5 +1,5 @@
 //
-//  ios_stay_monitorUITestsLaunchTests.swift
+//  StayMonitorUITestsLaunchTests.swift
 //  ios-stay-monitorUITests
 //
 //  Created by 上條栞汰 on 2026/05/21.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class ios_stay_monitorUITestsLaunchTests: XCTestCase {
+final class StayMonitorUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

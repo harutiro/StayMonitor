@@ -153,17 +153,20 @@ custom_rules:
   # 並行処理: ロック機構禁止 → actorを使え
   no_lock_primitives:
     regex: 'NSLock\b|NSRecursiveLock\b|os_unfair_lock\b'
+    match_kinds: [identifier, typeidentifier]
     message: "ロック機構は禁止。actorを使用せよ。参照: .claude/rules/BEST_PRACTICES.md の並行処理セクション"
     severity: error
 
   # 並行処理: DispatchQueue禁止 → Swift Concurrencyを使え
   no_dispatch_queue:
     regex: 'DispatchQueue\b'
+    match_kinds: [identifier, typeidentifier]
     message: "DispatchQueueは禁止。Swift Concurrency (actor/Task/async-await) を使用せよ。参照: .claude/rules/BEST_PRACTICES.md"
     severity: error
 
   # トップレベル関数禁止 → 最低でもenumでnamespaceをつけろ
   no_top_level_function:
     regex: '^func\s+'
+    match_kinds: [keyword]
     message: "トップレベル関数は禁止。最低でもenumでnamespaceをつけろ（例: enum Calc { static func ... }）。参照: .claude/rules/BEST_PRACTICES.md"
     severity: error
