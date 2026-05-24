@@ -9,6 +9,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
 
+      - name: ディレクトリの変更
+        run: cd ./android
+
       - name: Change Permission
         run: chmod +x ./gradlew
 
