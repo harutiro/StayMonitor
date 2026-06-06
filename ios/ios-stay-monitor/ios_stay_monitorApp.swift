@@ -7,12 +7,24 @@
 
 import AppFeature
 import ComposableArchitecture
+import Dependencies
 import SwiftUI
 
 @main
 struct StayMonitorApp: App {
-    let store = Store(initialState: AppFeature.State()) {
-        AppFeature()
+    let store: StoreOf<AppFeature>
+
+    init() {
+        do {
+            try prepareDependencies {
+                try $0.bootstrapDatabase()
+            }
+        } catch {
+            fatalError("データベースの初期化に失敗しました: \(error)")
+        }
+        store = Store(initialState: AppFeature.State()) {
+            AppFeature()
+        }
     }
 
     var body: some Scene {
